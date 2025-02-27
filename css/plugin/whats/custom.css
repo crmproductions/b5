@@ -1,0 +1,338 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-blue-Prefeitura Digital {
+    background-color: #005CA8;
+}
+
+.hover\:bg-blue-Prefeitura Digital:hover {
+    background-color: #005CA8;
+}
+
+.text-blue-Prefeitura Digital {
+    color: #005CA8;
+}
+
+.hover\:text-blue-Prefeitura Digital:hover {
+    color: #005CA8;
+}
+
+.border-blue-Prefeitura Digital {
+    border-color: #005CA8;
+}
+
+.hover\:border-blue-Prefeitura Digital:hover {
+    border-color: #005CA8;
+}
+
+.bg-blue-Prefeitura Digital-2 {
+    background-color: #80ADD3;
+}
+
+.hover\:bg-blue-Prefeitura Digital-2:hover {
+    background-color: #80ADD3;
+}
+
+.text-blue-Prefeitura Digital-2 {
+    color: #80ADD3;
+}
+
+.hover\:text-blue-Prefeitura Digital-2:hover {
+    color: #80ADD3;
+}
+
+.border-blue-Prefeitura Digital-2 {
+    border-color: #80ADD3;
+}
+
+.hover\:border-blue-Prefeitura Digital-2:hover {
+    border-color: #80ADD3;
+}
+
+.bg-blue-Prefeitura Digital-3 {
+    background-color: #BDD5E8;
+}
+
+.hover\:bg-blue-Prefeitura Digital-3:hover {
+    background-color: #BDD5E8;
+}
+
+.text-blue-Prefeitura Digital-3 {
+    color: #BDD5E8;
+}
+
+.hover\:text-blue-Prefeitura Digital-3:hover {
+    color: #BDD5E8;
+}
+
+.border-blue-Prefeitura Digital-3 {
+    border-color: #BDD5E8;
+}
+
+.hover\:border-blue-Prefeitura Digital-3:hover {
+    border-color: #BDD5E8;
+}
+
+.bg-blue-Prefeitura Digital-4 {
+    background-color: #147BD1;
+}
+
+.hover\:bg-blue-Prefeitura Digital-4:hover {
+    background-color: #147BD1;
+}
+
+.text-blue-Prefeitura Digital-4 {
+    color: #147BD1;
+}
+
+.hover\:text-blue-Prefeitura Digital-4:hover {
+    color: #147BD1;
+}
+
+.border-blue-Prefeitura Digital-4 {
+    border-color: #147BD1;
+}
+
+.hover\:border-blue-Prefeitura Digital-4:hover {
+    border-color: #147BD1;
+}
+
+.after\:border-blue-Prefeitura Digital-4:after {
+    border-color: #147BD1;
+}
+
+@media (min-width: 1025px) {
+    .crop {
+        object-fit: cover !important;
+        object-position: center !important;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1566px) {
+    .crop {
+        object-fit: cover !important;
+        object-position: center;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+
+form.form-search input {
+    width: 100%;
+    background-color: #E0EBF5;
+    border-radius: 12px;
+    padding-right: 15px;
+    padding-left: 50px;
+}
+
+form.form-search button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 0 15px;
+}
+
+/*menu*/
+
+@media (min-width: 1025px) {
+    ul.menu li a {
+        font-weight: 400;
+    }
+
+    ul.menu li a:hover, ul.menu li a:focus {
+        text-decoration: none;
+        opacity: 0.9;
+    }
+
+    ul.menu > li > ul {
+        display: none;
+    }
+
+    ul.menu li:hover > ul {
+        box-shadow: -1px 4px 5px #1c1c1c69;
+        padding: 15px 0 15px 15px;
+        border-top: 2px solid #E2E2E2;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 84px;
+        background-color: #fff;
+        height: auto;
+        text-align: left;
+        z-index: 9999;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 1199px) {
+        ul.menu li:hover > ul {
+            width: auto;
+        }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1199px) {
+        ul.menu li:hover > ul {
+            width: auto;
+        }
+    }
+
+    ul.menu li:hover > ul > li {
+        padding-left: 0px;
+    }
+
+    ul.menu li:hover > ul > li a.menu-conteudo-link {
+        font-family: 'Lato', sans-serif !important;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        -webkit-border-radius: 10px !important;
+        -moz-border-radius: 10px !important;
+        border-radius: 10px !important;
+        padding: 5px 10px;
+        padding-right: 25px;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        line-height: 24px !important;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+    }
+
+    ul.menu li:hover > ul > li a.menu-conteudo-link:hover {
+        text-decoration: underline;
+    }
+}
+/*menu */
+
+/*table servicos*/
+
+table.table-servicos {
+    overflow: hidden;
+    width: 100%;
+}
+
+table.table-servicos th {
+    padding: 1em;
+    border-top: 0;
+}
+
+table.table-servicos td {
+    padding: 1em;
+}
+
+table.table-servicos thead th:first-child {
+    border-left: 0px;
+}
+
+table.table-servicos tbody tr td:first-child {
+    border-left: 0px;
+}
+
+table.table-servicos thead tr th:last-child {
+    border-right: 0px;
+}
+
+table.table-servicos tbody tr td:last-child {
+    border-right: 0px;
+}
+
+table.table-servicos tfoot tr td:last-child {
+    border-right: 0px;
+}
+
+table.table-servicos tfoot td:first-child {
+    border-left: 0px;
+}
+
+table.table-servicos tfoot td {
+    border-bottom: 0px;
+}
+
+/*table servicos home*/
+
+
+body::-webkit-scrollbar {
+    width: 6px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #eee;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.6);    /* color of the scroll thumb */
+    border: 1px solid #eee;  /* creates padding around scroll thumb */
+    border-radius: 6px;
+}
+
+/*form filtro*/
+
+form.search-filtro {
+    width: 100%;
+    position: relative;
+}
+
+form.search-filtro input {
+    font-family: 'Lato', sans-serif;
+}
+
+form.search-filtro select {
+    font-family: 'Lato', sans-serif;
+}
+
+table.table-planejamento {
+    overflow: hidden;
+    width: 100%;
+}
+
+table.table-planejamento th {
+    padding: 1em;
+    border-top: 0;
+}
+
+table.table-planejamento td {
+    padding: 1em;
+}
+
+/*carousel terreno*/
+
+.carousel {
+    margin-bottom: 15px;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+.carousel-nav .carousel-cell {
+    width: 100px;
+    height: 75px;
+}
+/*carousel terreno*/
+
+.txt-href a {
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    word-break: break-all;
+}

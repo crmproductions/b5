@@ -1,0 +1,42 @@
+/* Transições suaves para mudança de tema */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para o botão de tema */
+#theme-toggle {
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Animação para os ícones */
+#theme-toggle svg {
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+#theme-toggle:hover svg {
+    transform: rotate(12deg);
+}
+
+/* Cores específicas para modo escuro */
+.dark {
+    --bg-primary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --border-color: #374151;
+}
+
+/* Cores específicas para modo claro */
+:root {
+    --bg-primary: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --border-color: #e5e7eb;
+} 

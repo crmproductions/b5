@@ -1,0 +1,36 @@
+/* Estilos para o VLibras */
+.access-button {
+    width: 40px !important;
+    height: 40px !important;
+    right: 20px !important;
+    bottom: 90px !important; /* Ajuste conforme necessário para não sobrepor outros elementos */
+    z-index: 1000 !important;
+}
+
+.vpw-settings-btn {
+    display: none !important;
+}
+
+.vpw-box {
+    height: calc(100% - 90px) !important; /* Ajuste para não cobrir todo o conteúdo */
+    bottom: 90px !important;
+}
+
+.vpw-translate-button {
+    width: 120px !important;
+}
+
+/* Ajustes para modo escuro */
+.dark .access-button {
+    filter: brightness(0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .access-button {
+        width: 35px !important;
+        height: 35px !important;
+        right: 15px !important;
+        bottom: 80px !important;
+    }
+} 

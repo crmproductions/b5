@@ -1,0 +1,219 @@
+/* Estilos para o menu lateral */
+#sidebar {
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(229, 231, 235, 0.1);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%); /* Começa escondido */
+}
+
+#sidebar.sidebar-open {
+    transform: translateX(0); /* Mostra o menu */
+}
+
+.dark #sidebar {
+    background: rgba(31, 41, 55, 0.95);
+}
+
+#sidebar:not(.dark) {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Cabeçalho do menu com perfil */
+.sidebar-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Ajustes para o perfil */
+.sidebar-header .profile-status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #10B981;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Container dos links */
+.sidebar-links {
+    padding: 1.25rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+}
+
+/* Ajuste do scroll */
+.sidebar-links::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-links::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-links::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.3);
+    border-radius: 4px;
+}
+
+/* Estilo dos links */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.sidebar-link:not(.active) {
+    color: #4B5563;
+}
+
+.dark .sidebar-link:not(.active) {
+    color: #D1D5DB;
+}
+
+.sidebar-link:hover {
+    background: rgba(243, 244, 246, 0.1);
+    transform: translateX(4px);
+}
+
+.dark .sidebar-link:hover {
+    background: rgba(55, 65, 81, 0.3);
+}
+
+/* Ícones */
+.sidebar-link svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 1rem;
+    transition: all 0.2s ease;
+}
+
+/* Separador de seções */
+.sidebar-separator {
+    height: 1px;
+    background: rgba(229, 231, 235, 0.1);
+    margin: 1rem 0;
+}
+
+/* Botão de cadastro especial */
+.sidebar-cta {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    color: white;
+    padding: 0.875rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.sidebar-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(59, 130, 246, 0.3);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+}
+
+.sidebar-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px -1px rgba(59, 130, 246, 0.2);
+}
+
+/* Botão toggle do menu */
+#sidebar-toggle {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+#sidebar-toggle:hover {
+    background: rgba(243, 244, 246, 0.1);
+}
+
+/* Botão de abrir menu */
+#open-sidebar {
+    transition: all 0.2s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#open-sidebar:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay para fechar o menu em dispositivos móveis */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 280px;
+    }
+    
+    .sidebar-header {
+        padding: 1rem;
+    }
+    
+    .sidebar-cta {
+        padding: 0.75rem 1rem;
+    }
+    
+    .sidebar-links {
+        padding: 1rem;
+    }
+    
+    .sidebar-link {
+        padding: 0.75rem;
+    }
+}
+
+/* Animações */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.sidebar-enter {
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Efeito hover nos links */
+#sidebar a:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+} 

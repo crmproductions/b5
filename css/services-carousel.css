@@ -1,0 +1,66 @@
+.services-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.service-slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#service-modal {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#service-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.service-details-btn:focus {
+    outline: none;
+    ring: 2px;
+    ring-offset: 2px;
+    ring-blue-500;
+}
+
+.service-details-btn {
+    background-color: #2563eb; /* azul mais escuro */
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.service-details-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.service-slide h3 {
+    color: #1f2937; /* texto escuro para modo claro */
+}
+
+.dark .service-slide h3 {
+    color: #f3f4f6; /* texto claro para modo escuro */
+}
+
+/* Ajuste para o título do menu */
+.section-title {
+    color: #1f2937;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.dark .section-title {
+    color: #f3f4f6;
+}
+
+/* Melhorar contraste dos textos */
+.service-slide p {
+    color: #4b5563; /* texto cinza mais escuro para modo claro */
+}
+
+.dark .service-slide p {
+    color: #d1d5db; /* texto cinza mais claro para modo escuro */
+} 

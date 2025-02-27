@@ -1,0 +1,96 @@
+/* Estilos para a seção de menu */
+.menu-section {
+    background-color: var(--bg-primary);
+    padding: 3rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu-section.dark {
+    background-color: #1a1a1a;
+}
+
+/* Título do Menu */
+.menu-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.dark .menu-title {
+    color: #ffffff;
+}
+
+/* Container dos cards */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    padding: 1rem;
+}
+
+/* Estilo dos cards */
+.menu-card {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .menu-card {
+    background-color: #2d3748;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones do menu */
+.menu-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    color: #3b82f6;
+}
+
+.dark .menu-icon {
+    color: #60a5fa;
+}
+
+/* Texto do menu */
+.menu-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-top: 0.5rem;
+}
+
+.dark .menu-text {
+    color: #e5e7eb;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .menu-title {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .menu-card {
+        padding: 1.5rem 1rem;
+    }
+} 
