@@ -1393,46 +1393,48 @@
 
         <!-- Atualizar o script theme.js -->
         <script>
-            // Função para atualizar os ícones do tema
+            // Função para atualizar os ícones do tema (apenas desktop)
             function updateThemeIcons(isDark) {
-                // Desktop icons
+                // Apenas ícones desktop
                 const darkIcon = document.getElementById('theme-toggle-dark-icon');
                 const lightIcon = document.getElementById('theme-toggle-light-icon');
-                
-                // Mobile icons
-                const mobileDarkIcon = document.getElementById('mobile-theme-toggle-dark-icon');
-                const mobileLightIcon = document.getElementById('mobile-theme-toggle-light-icon');
 
                 if (isDark) {
                     darkIcon.classList.add('hidden');
                     lightIcon.classList.remove('hidden');
-                    mobileDarkIcon.classList.add('hidden');
-                    mobileLightIcon.classList.remove('hidden');
                 } else {
                     darkIcon.classList.remove('hidden');
                     lightIcon.classList.add('hidden');
-                    mobileDarkIcon.classList.remove('hidden');
-                    mobileLightIcon.classList.add('hidden');
                 }
             }
 
-            // Definir tema claro como padrão ao carregar a página
-            if (localStorage.theme === 'dark') {
-                document.documentElement.classList.add('dark');
-                updateThemeIcons(true);
-            } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.theme = 'light'; // Garante que o tema claro seja salvo
-                updateThemeIcons(false);
+            // Verificar se é dispositivo móvel
+            function isMobile() {
+                return window.innerWidth < 1024; // 1024px é o breakpoint lg do Tailwind
             }
 
-            // Event listeners para os botões de tema
-            document.getElementById('theme-toggle').addEventListener('click', function() {
-                toggleTheme();
-            });
+            // Definir tema inicial
+            if (isMobile()) {
+                // Força modo claro no mobile
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                // No desktop, verifica a preferência salva
+                if (localStorage.theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    updateThemeIcons(true);
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                    updateThemeIcons(false);
+                }
+            }
 
-            document.getElementById('mobile-theme-toggle').addEventListener('click', function() {
-                toggleTheme();
+            // Event listener apenas para o botão desktop
+            document.getElementById('theme-toggle').addEventListener('click', function() {
+                if (!isMobile()) { // Só funciona no desktop
+                    toggleTheme();
+                }
             });
 
             function toggleTheme() {
@@ -1447,8 +1449,15 @@
                 }
             }
 
-            // Atualizar ícones iniciais com o tema claro
-            updateThemeIcons(document.documentElement.classList.contains('dark'));
+            // Garantir modo claro no mobile mesmo ao redimensionar
+            window.addEventListener('resize', function() {
+                if (isMobile()) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                }
+            });
         </script>
     </body>
+</html>
+
 </html>
